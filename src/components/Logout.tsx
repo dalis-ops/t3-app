@@ -1,7 +1,7 @@
 import { signOut } from "next-auth/react";
 
 interface LayoutProps {
-    name?: string;
+    name: string;
   }
 
 const Logout: React.FC<LayoutProps> = ({name}) => {
