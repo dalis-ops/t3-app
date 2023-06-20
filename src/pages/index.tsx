@@ -1,4 +1,4 @@
-import { signIn, signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import Form from "~/components/Form";
 import GuestbookEntries from "~/components/GuestbookEntries";
 import Logout from "~/components/Logout";
@@ -20,7 +20,7 @@ const Home = () => {
       <div className="pt-10">
         <div>
           {session ? (
-            <Logout name={session.user?.name}/>
+            <Logout name={session.user?.name || ''}/>
           ) : (
            <SignIn/>
           )}
